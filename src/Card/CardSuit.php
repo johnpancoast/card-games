@@ -15,8 +15,24 @@ namespace Pancoast\CardGames\Card;
  */
 class CardSuit
 {
+    /* Card suits */
     const SPADES = 'spades';
     const CLUBS = 'clubs';
     const DIAMONDS = 'diamonds';
     const HEARTS = 'hearts';
+
+    /**
+     * Get all card suits
+     *
+     * @return array
+     */
+    public static function getAll()
+    {
+        return [
+            self::SPADES,
+            self::CLUBS,
+            self::DIAMONDS,
+            self::HEARTS,
+        ];
+    }
 }

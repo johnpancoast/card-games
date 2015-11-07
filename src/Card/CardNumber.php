@@ -41,7 +41,17 @@ class CardNumber
             throw new \LogicException('Trying to get value of non-existent card');
         }
 
-        $values = [
+        return self::getValues()[$number];
+    }
+
+    /**
+     * Get all card number values
+     *
+     * @return array
+     */
+    public static function getValues()
+    {
+        return [
             self::TWO => 0,
             self::THREE => 1,
             self::FOUR => 2,
@@ -56,7 +66,29 @@ class CardNumber
             self::KING => 11,
             self::ACE => 12
         ];
+    }
 
-        return $values[$number];
+    /**
+     * Get all card numbers
+     *
+     * @return array
+     */
+    public static function getAll()
+    {
+        return [
+            self::TWO,
+            self::THREE,
+            self::FOUR,
+            self::FIVE,
+            self::SIX,
+            self::SEVEN,
+            self::EIGHT,
+            self::NINE,
+            self::TEN,
+            self::JACK,
+            self::QUEEN,
+            self::KING,
+            self::ACE,
+        ];
     }
 }
