@@ -37,7 +37,7 @@ class CardNumber
      */
     public static function getValue($number)
     {
-        if (!isset(CardNumber::$number)) {
+        if (!in_array($number, self::getAll())) {
             throw new \LogicException('Trying to get value of non-existent card');
         }
 

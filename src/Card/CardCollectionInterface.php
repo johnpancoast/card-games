@@ -25,4 +25,12 @@ interface CardCollectionInterface extends Collection
      * @return $this
      */
     public function addCard(CardInterface $card);
+
+    /**
+     * Remove a card from collection
+     *
+     * @param CardInterface $card
+     * @return mixed
+     */
+    public function removeCard(CardInterface $card);
 }

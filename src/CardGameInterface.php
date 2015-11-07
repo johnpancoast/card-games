@@ -44,6 +44,13 @@ interface CardGameInterface
     public function getPlayer($uniqueId);
 
     /**
+     * Get all players
+     *
+     * @return PlayerCollectionInterface
+     */
+    public function getPlayers();
+
+    /**
      * Core logic of the game
      *
      * @throws GameLogicException If something about game is not right

@@ -8,6 +8,9 @@
 
 namespace Pancoast\CardGames\People;
 
+use Pancoast\CardGames\Card\CardInterface;
+use Pancoast\CardGames\Card\HandInterface;
+
 /**
  * @todo Add description
  *
@@ -37,6 +40,14 @@ interface PlayerInterface
      * @return mixed
      */
     public function addToHand(CardInterface $card);
+
+    /**
+     * Remove card from hand
+     *
+     * @param CardInterface $card
+     * @return mixed
+     */
+    public function removeFromHand(CardInterface $card);
 
     /**
      * @return HandInterface

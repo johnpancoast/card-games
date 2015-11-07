@@ -85,6 +85,14 @@ abstract class AbstractCardGame implements CardGameInterface
     /**
      * @inheritDoc
      */
+    public function getPlayers()
+    {
+        return $this->players;
+    }
+
+    /**
+     * @inheritDoc
+     */
     public function play()
     {
         $this->isActive = true;

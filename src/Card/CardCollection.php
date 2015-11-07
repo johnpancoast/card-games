@@ -24,4 +24,12 @@ class CardCollection extends ArrayCollection implements CardCollectionInterface
     {
         $this->add($card);
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function removeCard(CardInterface $card)
+    {
+        $this->removeElement($card);
+    }
 }

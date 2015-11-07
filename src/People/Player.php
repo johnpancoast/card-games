@@ -7,6 +7,9 @@
  */
 
 namespace Pancoast\CardGames\People;
+use Pancoast\CardGames\Card\CardInterface;
+use Pancoast\CardGames\Card\Hand;
+use Pancoast\CardGames\Card\HandInterface;
 
 /**
  * @todo Add description
@@ -33,6 +36,7 @@ class Player implements PlayerInterface
     public function __construct($id = null)
     {
         $this->id = $id ?: uniqid();
+        $this->hand = new Hand();
     }
 
     /**
@@ -57,6 +61,14 @@ class Player implements PlayerInterface
     public function addToHand(CardInterface $card)
     {
         $this->hand->addCard($card);
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function removeFromHand(CardInterface $card)
+    {
+        $this->hand->removeElement($card);
     }
 
     /**

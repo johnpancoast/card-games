@@ -33,7 +33,10 @@ class Card implements CardInterface
      */
     public function __construct($number, $suit)
     {
-        if (!isset(CardNumber::$number) || !isset(CardSuit::$suit)) {
+        $numbers = CardNumber::getAll();
+        $suits = CardSuit::getAll();
+
+        if (!in_array($number, $numbers) || !in_array($suit, $suits)) {
             throw new \LogicException('Unknown card number or suit');
         }
 
