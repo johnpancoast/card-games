@@ -6,7 +6,7 @@
  * @license MIT
  */
 
-namespace Pancoast\CardGames\Hand;
+namespace Pancoast\CardGames\Card;
 
 /**
  * @todo Add description
