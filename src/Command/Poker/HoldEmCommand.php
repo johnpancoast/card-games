@@ -3,11 +3,12 @@
  * @package johnpancoast/card-games
  * @copyright (c) 2015 John Pancoast
  * @author John Pancoast <johnpancoaster@gmail.com>
- * @license ${LICENSE}
+ * @license MIT
  */
 
 namespace Pancoast\CardGames\Command\Poker;
 
+use Pancoast\CardGames\Game\Poker\HoldEm;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -21,38 +22,35 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class HoldEmCommand extends Command
 {
+    /**
+     * @inheritDoc
+     */
     protected function configure()
     {
         $this
-            ->setName('demo:greet')
-            ->setDescription('Greet someone')
+            ->setName('holdem')
+            ->setDescription("Texas Hold 'Em")
             ->addArgument(
-                'name',
-                InputArgument::OPTIONAL,
-                'Who do you want to greet?'
-            )
-            ->addOption(
-                'yell',
-                null,
-                InputOption::VALUE_NONE,
-                'If set, the task will yell in uppercase letters'
+                'player_count',
+                InputArgument::REQUIRED,
+                'How many players are in the game'
             )
         ;
     }
 
+    /**
+     * @inheritDoc
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $name = $input->getArgument('name');
-        if ($name) {
-            $text = 'Hello '.$name;
-        } else {
-            $text = 'Hello';
+        $playerCount = $input->getArgument('player_count');
+
+        $game = new HoldEm($output);
+
+        for ($i = 0; $i < $playerCount; $i++) {
+            $game->createPlayer();
         }
 
-        if ($input->getOption('yell')) {
-            $text = strtoupper($text);
-        }
-
-        $output->writeln($text);
+        $game->play();
     }
 }
