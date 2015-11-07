@@ -8,17 +8,20 @@
 
 namespace Pancoast\CardGames\Card;
 
+use Doctrine\Common\Collections\ArrayCollection;
+
 /**
  * @todo Add description
  *
  * @author John Pancoast <johnpancoaster@gmail.com>
  */
-interface HandInterface extends CardCollectionInterface
+class Hand extends CardCollection implements HandInterface
 {
     /**
-     * Get the type of this hand (e.g., royal flush)
-     *
-     * @return string One of the {@see HandType} constants
+     * @inheritDoc
      */
-    public function getType();
+    public function getType()
+    {
+        // TODO: Implement getType() method.
+    }
 }

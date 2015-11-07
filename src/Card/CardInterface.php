@@ -13,12 +13,26 @@ namespace Pancoast\CardGames\Card;
  *
  * @author John Pancoast <johnpancoaster@gmail.com>
  */
-interface HandInterface extends CardCollectionInterface
+interface CardInterface
 {
     /**
-     * Get the type of this hand (e.g., royal flush)
+     * Get card number
      *
-     * @return string One of the {@see HandType} constants
+     * @return string
      */
-    public function getType();
+    public function getNumber();
+
+    /**
+     * Get card suit
+     *
+     * @return string
+     */
+    public function getSuit();
+
+    /**
+     * Get unique id for card
+     *
+     * @return string
+     */
+    public function getId();
 }

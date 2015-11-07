@@ -13,12 +13,10 @@ namespace Pancoast\CardGames\Card;
  *
  * @author John Pancoast <johnpancoaster@gmail.com>
  */
-interface HandInterface extends CardCollectionInterface
+class CardSuit
 {
-    /**
-     * Get the type of this hand (e.g., royal flush)
-     *
-     * @return string One of the {@see HandType} constants
-     */
-    public function getType();
+    const SPADES = 'spades';
+    const CLUBS = 'clubs';
+    const DIAMONDS = 'diamonds';
+    const HEARTS = 'hearts';
 }
