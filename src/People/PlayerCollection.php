@@ -15,13 +15,19 @@ use Doctrine\Common\Collections\ArrayCollection;
  *
  * @author John Pancoast <johnpancoaster@gmail.com>
  */
-class PlayerCollection extends ArrayCollection
+class PlayerCollection extends ArrayCollection implements PlayerCollectionInterface
 {
+    /**
+     * @inheritDoc
+     */
     public function addPlayer(PlayerInterface $player)
     {
         return parent::set($player->getId(), $player);
     }
 
+    /**
+     * @inheritDoc
+     */
     public function createPlayer()
     {
         $player = new Player();
