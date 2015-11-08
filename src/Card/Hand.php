@@ -204,6 +204,9 @@ class Hand extends CardCollection implements HandInterface
      */
     private function getFullHouse()
     {
+        // @todo fix below
+        return false;
+
         if (isset($this->skipTypes['full_house'])) {
             return false;
         }
