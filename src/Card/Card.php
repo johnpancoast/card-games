@@ -57,7 +57,7 @@ class Card implements CardInterface
      */
     public function getSuit()
     {
-        return $this->getSuit();
+        return $this->suit;
     }
 
     /**
@@ -65,6 +65,6 @@ class Card implements CardInterface
      */
     public function getId()
     {
-        return sprintf('%s-%s', $this->getSuit(), $this->getNumber());
+        return sprintf('%s %s', $this->getNumber(), $this->getSuit());
     }
 }
