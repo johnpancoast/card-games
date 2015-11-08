@@ -310,7 +310,6 @@ class Hand extends CardCollection implements HandInterface
             $loop++;
         }
 
-
         $this->skipTypes['straight'] = true;
         return false;
     }
