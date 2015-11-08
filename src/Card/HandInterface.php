@@ -16,9 +16,9 @@ namespace Pancoast\CardGames\Card;
 interface HandInterface extends CardCollectionInterface
 {
     /**
-     * Get the highest type of this hand (e.g., royal flush, three of a kind etc.)
+     * Get the best poker hand given a players hand
      *
-     * @return string One of the {@see HandType} constants
+     * @return PokerHandInterface
      */
-    public function getType();
+    public function getPokerHand();
 }
