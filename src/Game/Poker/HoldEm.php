@@ -204,6 +204,7 @@ class HoldEm extends AbstractCardGame
      * @param CardGameInterface $cardGame
      * @param OutputInterface $output
      * @throws GameLogicException
+     * @todo Complete logic for practical.
      */
     protected function outputWinner(CardGameInterface $cardGame, OutputInterface $output)
     {
@@ -224,6 +225,9 @@ class HoldEm extends AbstractCardGame
             $players[$player->getId()] = $hand;
         }
 
+        // examine hands
+        // @todo Note here is where we would compare hands. Since {@see Card\Hand} is presently
+        // incomplete, this is just outputting hands at the moment.
         foreach ($players as $playerId => $hand) {
             $pokerHand = $hand->getPokerHand();
 
