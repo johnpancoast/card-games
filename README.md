@@ -19,7 +19,7 @@ Usage
 ./bin/games [game] [options]
 ```
 
-At present the only game is a mini version of Texas Hold 'Em which you can run with the following:
+At present, the only game is a mini version of Texas Hold 'Em which you can run with the following:
 
 ```
 ./bin/games texas-holdem [amount of player]
