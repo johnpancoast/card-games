@@ -43,6 +43,8 @@ class HoldEmCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        $output->writeln('<info>!!! Note that the program is presently incomplete and not outtputting winners yet. !!!</info>');
+
         $playerCount = $input->getArgument('player_count');
 
         $game = new HoldEm($output);
