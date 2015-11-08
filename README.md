@@ -15,6 +15,8 @@ composer install
 
 Usage
 -----
+*Games are presently in the works.*
+
 ```
 ./bin/games [game] [options]
 ```
