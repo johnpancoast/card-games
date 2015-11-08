@@ -50,9 +50,9 @@ class HandType
     /**
      * Get all values
      *
-     * @return array
+     * @return array Values of types ordered from lowest to highest
      */
-    public static function getValues()
+    public static function getRanks()
     {
         return [
             self::HIGH_CARD => 0,
@@ -74,8 +74,8 @@ class HandType
      * @param $type
      * @return mixed
      */
-    public static function getValue($type)
+    public static function getRank($type)
     {
-        return self::getValues()[$type];
+        return self::getRanks()[$type];
     }
 }
