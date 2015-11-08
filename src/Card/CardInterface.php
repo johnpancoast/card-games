@@ -35,4 +35,9 @@ interface CardInterface
      * @return string
      */
     public function getId();
+
+    /**
+     * @return int
+     */
+    public function getRank();
 }

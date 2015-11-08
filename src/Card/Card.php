@@ -67,4 +67,12 @@ class Card implements CardInterface
     {
         return sprintf('%s %s', $this->getNumber(), $this->getSuit());
     }
+
+    /**
+     * @inheritDoc
+     */
+    public function getRank()
+    {
+        return CardNumber::getRank($this->getNumber());
+    }
 }
