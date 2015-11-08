@@ -28,7 +28,7 @@ class HoldEmCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('holdem')
+            ->setName('texas-holdem')
             ->setDescription("Texas Hold 'Em")
             ->addArgument(
                 'player_count',
