@@ -16,7 +16,7 @@ namespace Pancoast\CardGames\Card;
 interface HandInterface extends CardCollectionInterface
 {
     /**
-     * Get the type of this hand (e.g., royal flush)
+     * Get the highest type of this hand (e.g., royal flush, three of a kind etc.)
      *
      * @return string One of the {@see HandType} constants
      */
