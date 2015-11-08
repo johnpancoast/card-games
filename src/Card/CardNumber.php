@@ -35,21 +35,23 @@ class CardNumber
      * @param $number One of the class constants
      * @return int
      */
-    public static function getValue($number)
+    public static function getRank($number)
     {
         if (!in_array($number, self::getAll())) {
             throw new \LogicException('Trying to get value of non-existent card');
         }
 
-        return self::getValues()[$number];
+        return self::getRanks()[$number];
     }
 
     /**
      * Get all card number values
      *
-     * @return array
+     * Return values *must* be sequential
+     *
+     * @return array Sequential values
      */
-    public static function getValues()
+    public static function getRanks()
     {
         return [
             self::TWO => 0,
