@@ -96,9 +96,7 @@ class HoldEm extends AbstractCardGame
             $this->deck->addCard($card);
         }
 
-        if ($this->deck->count() != 52) {
-            throw new GameLogicException('We created a deck but it does not have 52 cards...');
-        }
+        $this->assertDeckCount(52);
     }
 
     /**
