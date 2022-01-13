@@ -2,7 +2,7 @@ card-games
 ==========
 A collection of card games starting with a mini/basic version of texas hold 'em.
 
-*This is just for academic purposes...*
+_This was just for an interview IIRC but I went further with it. It's incomplete._
 
 Install
 -------
